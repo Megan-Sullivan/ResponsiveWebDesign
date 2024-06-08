@@ -1,0 +1,516 @@
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@500&display=swap');
+
+/* Add additional global styles to reset margins and paddings */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body, html {
+  margin: 0;
+  padding: 0;
+  height: 100%;
+  width: 100%;
+  box-sizing: border-box;
+}
+
+.App {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 100%;
+  height: 100%;
+  background-color: white;
+}
+
+body {
+  background-color: lightgrey;
+  color: black;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+.container {
+  width: 1200px;
+  height: 800px;
+  margin: 0 auto;
+  background-color: white;
+  caret-color: transparent;
+  
+}
+
+.nav-bar {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  background-color: #484A47;
+  width: 100%;
+  height: 48px;
+  padding: 0, 20px;
+}
+
+.nav-bar a {
+  position: relative;
+  color: white;
+  width: 95%;
+  height: 100%;
+  margin: 20px auto;
+}
+
+.website-logo {
+  display: flex;
+  align-items: center;
+  margin: auto 30px;
+}
+
+.menu-icon {
+  width: 20px;
+  height: 20px;
+  background-color: #C751FF;
+  background-image: url('../src/assets/logoIcon.jpg');
+  background-size: cover;
+  background-position: center;
+  margin-right: 10px;
+}
+
+.website-title {
+  font-family: 'Inter', sans-serif;
+  font-weight: 500;
+  font-size: 16px;
+  line-height: 19.36px;
+  color: white;
+}
+
+.nav-links {
+  list-style-type: none;
+  padding: 0 30px 0 0;
+  display: flex;
+  justify-content: space-between;
+  width: 650px;
+  height: 48px;
+}
+
+.menu-option {
+  /*box-sizing: content-box;*/
+  width: 100px;
+  height: 48px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  position: relative;
+}
+
+.menu-option a {
+  font-family: 'Inter', sans-serif;
+  font-weight: 500;
+  font-size: 16px;
+  line-height: 19.36px;
+  text-align: center;
+  color: white;
+  text-decoration: none;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 100%;
+  height: 100%;
+  
+}
+
+.menu-option a[href="#home"] {
+  position: relative;
+}
+
+.menu-option a[href="#home"]::after {
+  content: "";
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  width: 100%;
+  height: 6px;
+  background-color: #C751FF;
+}
+
+.menu-option a:focus {
+  outline: none;
+}
+
+.toggle-menu-icon {
+  display: none;
+  width: 20px;
+  height: 20px;
+  background-color: red;
+  background-image: url('../src/assets/menuIcon2.jpg');
+  background-size: cover;
+  background-position: center;
+}
+
+.first-section {
+  display: flex;
+  justify-content: space-between;
+  width: 95%;
+  margin: 30px auto;
+}
+
+.welcome-text {
+  display: flex;
+  flex-direction: column;
+  justify-content: left;
+}
+
+.welcome-section h1 {
+  width: 556px;
+  height: 39px;
+}
+
+.welcome-text h1 {
+  width: 556px;
+  height: 39px;
+  font-family: 'Inter', sans-serif;
+  font-weight: 500;
+  font-size: 32px;
+  line-height: 38.73px;
+  margin-bottom: 20px;
+}
+
+.welcome-image {
+  width: 250px;
+  height: 140.63px;
+  background-color: #59546C;
+  flex-shrink: 0;
+  margin-left: 20px;
+  background-image: url('../src/assets/rwdLargeImage.jpg');
+  background-size: cover;
+  background-position: center;
+}
+
+.welcome-text p {
+  font-family: 'Inter', sans-serif;
+  font-weight: 400;
+  font-size: 16px;
+  line-height: 19.36px;
+  word-wrap: break-word;
+}
+
+.projects-section h2 {
+  font-family: 'Inter', sans-serif;
+  font-weight: 500;
+  font-size: 24px;
+  line-height: 29.05px;
+  width: 95%;
+  height: 100%;
+  margin: 40px auto 5px;
+}
+
+.projects-line {
+  border-bottom: 1px solid #ccc;
+  width: 95%;
+  height: 100%;
+  margin: 5px auto 20px;
+}
+
+.parent-container {
+  display: flex;
+  justify-content: space-between;
+  flex-wrap: wrap;
+  width: 95%;
+  margin: 40px auto;
+}
+
+.project-container {
+  display: grid;
+  gap: 10px;
+  width: 100%;
+}
+
+.project-container .project {
+  min-width: 200px;
+  max-width: 200px;
+  min-height: 200px;
+  max-height: 200px;
+  background-color: #38405F;
+  background-size: cover;
+  background-position: center;
+  margin: 5px;
+}
+
+.project-container .project:nth-child(1) {
+  background-image: url('../src/assets/5Box1.jpg');
+}
+
+.project-container .project:nth-child(2) {
+  background-image: url('../src/assets/5Box2.jpg');
+}
+
+.project-container .project:nth-child(3) {
+  background-image: url('../src/assets/5Box3.jpg');
+}
+
+.project-container .project:nth-child(4) {
+  background-image: url('../src/assets/5Box4.jpg');
+}
+
+.project-container .project:nth-child(5) {
+  background-image: url('../src/assets/5Box5.jpg');
+}
+
+.project-container {
+  display: grid;
+  gap: 10px;
+  width: 100%;
+}
+
+@media (min-width: 1200px) {
+  .project-container {
+    grid-template-columns: repeat(5, 1fr);
+  }
+}
+
+@media (max-width: 1199px) and (min-width: 800px) {
+
+  .container {
+    width: 800px;
+    height: 600px;
+  }
+
+  .first-section {
+  display: flex;
+  justify-content: space-between;
+  width: 95%;
+  margin: 20px auto;
+  }
+
+  .welcome-image {
+    width: 250px;
+    height: 146.74px;
+    Top: 64px;
+    Left: 1793px;
+    margin-left: -40px;
+  }
+
+  .welcome-text {
+    flex: 1;
+    padding-right: 10px;
+    margin-right: -20px;
+  }
+
+  .welcome-text h1 {
+    font-family: 'Inter';
+    font-weight: 500;
+    font-size: 24px;
+    line-height: 29.05px;
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+  }
+
+  .welcome-text p {
+    Width: 470px;
+    Height: 68px;
+    font-family: 'Inter', sans-serif;
+    font-weight: 400;
+    font-size: 14px;
+    line-height: 19.36px;
+    word-wrap: break-word;
+  }
+
+  .project-container {
+    grid-template-columns: repeat(4, 1fr);
+  }
+
+  .project-container .project {
+    min-width: 150px;
+    max-width: 150px;
+    min-height: 150px;
+    max-height: 150px;
+  }
+}
+
+@media (max-width: 799px) and (min-width: 400px) {
+  .container {
+    position: relative;
+    width: 400px;
+    height: 600px;
+  }
+
+  .first-section {
+    display: flex;
+    justify-content: column;
+    align-items: center;
+    width: 100%;
+    margin: 20px auto;
+  }
+
+  .website-logo, .toggle-menu-icon {
+    flex-shrink: 0; /* Prevents flex items from shrinking */
+  }
+
+  .toggle-menu-icon {
+    display: block;
+    order: 3;
+    margin-left: 200px;
+    z-index: 1001; /* Ensures the toggle menu icon is always visible */
+  }
+
+  .nav-bar {
+    flex-direction: row;
+    justify-content: space-between;
+    z-index: 1000; /* Ensures the nav bar stays on top */
+  }
+
+  .menu-links-container {
+    position: absolute;
+    top: 0px; /* Adjust as needed to position the menu beneath the nav bar */
+    right: 0;
+    width: 133px;
+    height: 600px;
+    background-color: #484A47;
+    transform: translateX(100%);
+    visibility: hidden;
+    transition: transform 0.3s ease-in-out, visibility 0.3s ease-in-out;
+    z-index: 1000;
+  }
+
+  .menu-links-container.active {
+    transform: translateX(0);
+    visibility: visible;
+  }
+
+  .nav-links {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    width: 10%;
+    height: 50%;
+    padding-left: 0;
+  }
+
+  .menu-option {
+    width: 100px;
+    height: 40px;
+    padding-left: 0; /* Removes padding from the menu option */
+    margin: 0; /* Removes margin from the menu option */
+  }
+
+  .menu-option a {
+    text-align: center;
+    color: white;
+    text-decoration: none;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 100%;
+    height: 100%;
+    
+  }
+
+  .menu-option a[href="#home"] {
+    position: relative; /* This ensures that the ::after pseudo-element is positioned relative to the "Home" link */
+  }
+  
+  .menu-option a[href="#home"]::after {
+    justify-content: left;
+    position: absolute;
+    top: 50%; /* Aligns the center of the rectangle with the center of the "Home" text */
+    left: 0; /* Positions the rectangle to the left within the menu */
+    width: 35px;
+    height: 4px; /* The border width is usually included in the height, so if you want a 4px border, set the height accordingly */
+    background-color: #C751FF;
+    transform: translateY(-50%) rotate(90deg); /* This adjusts the rectangle to be centered vertically with the "Home" text */
+    border: 4px hidden; /* If you want a border around the rectangle, use this property */
+  }
+
+  .menu-option a {
+    color: white;
+  }
+
+  .darken-background {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.5); /* Semi-transparent black */
+    z-index: 999; /* Ensure it's on top of other content */
+    pointer-events: none;
+  }
+
+  .menu-links-container {
+    z-index: 1000;
+  }
+
+  .first-section {  
+    display: flex;
+    flex-direction: column;
+    /*justify-content: center;*/
+    align-items: center;
+    width: 100%;
+    margin: 20px auto;
+    
+  }
+
+  .welcome-image {
+    order: -1;
+    width: 368px; /* Set the width of the placeholder to 368px */
+    height: 216px; /* Set the height of the placeholder to 216px */
+    background-color: #59546C; /* Color of the placeholder */
+    flex-shrink: 0;
+    /*margin-bottom: 20px;*/
+    /*position: relative;*/ /* Position the placeholder absolutely within its parent */
+    /*top: 0;*/ /* Position the placeholder at the top of its parent */
+    align-self: center;
+    margin-bottom: 20px;
+    margin-left: -1px;
+  }
+
+  .welcome-text {
+    align-self: flex-start; /* Align text to the start of the flex container */
+    width: 100%; /* Ensure text takes the full width and wraps as necessary */
+    padding: 0 20px; /* Add padding to prevent text from touching the edges */
+  }
+
+  .welcome-text h1 {
+    font-family: 'Inter';
+    font-weight: 500;
+    font-size: 16px;
+    line-height: 19.36px;
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    margin: 0px;
+  }
+
+  .welcome-text p {
+    Width: 368px;
+    Height: 60px;
+    font-family: 'Inter', sans-serif;
+    font-weight: 400;
+    font-size: 12px;
+    line-height: 14.52px;
+    word-wrap: break-word;
+  }
+
+  .welcome-text h1, .welcome-text p {
+    order: 1; /* Ensures the text follows the image */
+  }
+
+  .projects-section {
+    margin-top: -20px;
+  }
+  
+
+  .project-container {
+    grid-template-columns: repeat(2, 1fr);
+  }
+
+  .project-container .project {
+    min-width: 150px;
+    max-width: 150px;
+    min-height: 150px;
+    max-height: 150px;
+  }
+}
